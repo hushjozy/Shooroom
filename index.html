@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shooroom</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body onload="toggleImg()">
+    <section class="topA">
+      <img id="switchTop" src="./furn7.png" class="top-bg" alt="" >
+      <div class="overlaying" id="over-id">
+
+      </div>
+      <nav >
+        <ul id="nav-colo" class="nav_menu" id="nav-menu">
+          <label for="logo"> Shoorom</label>
+          <div class="nav-bar">
+            <li><a href="#">home</a> <i class="fas fa-chevron-down" id="show" onclick="showMenu()"></i>
+            </li>
+
+            <li><a href="#">shop</a> <i class="fas fa-chevron-down" id="show2" onclick="showMenu2()"></i>
+            </li>
+
+            <li><a href="#">about</a></li>
+            <li><a href="#">contact</a></li>
+          </div>
+        </ul>
+      </nav>
+    </section>
+    <section class="topatoo">
+      <div class="atoo-cent">
+        <h2>Discover innovative ways to decorate</h2>
+        <p> We provide unmatched quality, comfort and style for property
+          owners across the country. Our experts combine form and
+           function in bringing your vision to life.Create a room of
+           exquisite taste to your own style with our collection and make your property
+           a reflection of you and what you love</p>
+        <button type="button" name="button">SHOP NOW</button>
+      </div>
+      <div class="carousel-btn">
+        <button id="btn1" type="button" name="button"><</button>
+        <button id="btn1" type="button" name="button">></button>
+
+      </div>
+</section>
+<section class="down-sect">
+<img src="furn5.png" class="to-three" alt="">
+<div  class="to-three" id="point5" >
+  <div class="txt-mid">
+    <h2>About Our Customers</h2>
+    <p>Our multifunctional collection blends design and function to suit your individual taste.
+       make each room unique
+       function in bringing your vision to life.Create a room of
+       exquisite taste to your own style with our collection and make your property
+       a reflection of you and what you love</p>
+  </div>
+
+</div>
+
+<img src="furn4.png" class="to-three" alt="">
+<script type="text/javascript">
+var imageTop= document.getElementById('switchTop');
+var overId = document.getElementById("over-id");
+var navId= document.getElementById("nav-colo");
+var elem = document.getElementsByTagName("a");
+console.log(elem[0,1,2,3].style);
+console.log(imageTop)
+function toggleImg() {
+  setInterval(function(){
+    imageTop.style.transform= "scale(1)";
+    overId.style.transform= "scale(1)";
+    navId.style.color= "#fff";
+    elem[0].style.color= "#fff";
+      elem[1].style.color= "#fff";
+      elem[2].style.color= "#fff";
+      elem[3].style.color= "#fff";
+
+
+
+
+    if(imageTop.src == "file:///Users/user/Shooroom/furn7.png"){
+      imageTop.src = "file:///Users/user/Shooroom/furn2.png";
+      document.getElementById("switchTop").src.value=imageTop;
+      imageTop.style.opacity= 1;
+      setTimeout(function(){
+        console.log("changing...");
+        // imageTop.style.opacity= 0.2;
+        imageTop.style.transform= "scale(0.5)";
+          navId.style.color= "#000";
+          elem[0].style.color= "#000";
+            elem[1].style.color= "#000";
+            elem[2].style.color= "#000";
+            elem[3].style.color= "#000";
+
+
+        overId.style.transform= "scale(0.5)";
+
+      },3000);
+
+    }else{
+          imageTop.style.opacity= 1;
+          imageTop.style.transform= "scale(1)";
+          overId.style.transform= "scale(1)";
+          navId.style.color= "#fff";
+          elem[0].style.color= "#fff";
+            elem[1].style.color= "#fff";
+            elem[2].style.color= "#fff";
+            elem[3].style.color= "#fff";
+
+
+
+
+          imageTop.src = "file:///Users/user/Shooroom/furn7.png";
+        document.getElementById("switchTop").src.value=imageTop;
+    }
+  },3000)
+}
+
+</script>
+  </body>
+</html>
