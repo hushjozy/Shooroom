@@ -44,7 +44,7 @@
       </div>
 </section>
 <section class="down-sect">
-<img src="furn5.png" class="to-three" alt="">
+<img src="./furn5.png" class="to-three" alt="">
 <div  class="to-three" id="point5" >
   <div class="txt-mid">
     <h2>About Our Customers</h2>
@@ -57,14 +57,14 @@
 
 </div>
 
-<img src="furn4.png" class="to-three" alt="">
+<img src="./furn4.png" class="to-three" alt="">
 <script type="text/javascript">
 var imageTop= document.getElementById('switchTop');
 var overId = document.getElementById("over-id");
 var navId= document.getElementById("nav-colo");
 var elem = document.getElementsByTagName("a");
 console.log(elem[0,1,2,3].style);
-console.log(imageTop)
+console.log(imageTop.src)
 function toggleImg() {
   setInterval(function(){
     imageTop.style.transform= "scale(1)";
@@ -78,8 +78,8 @@ function toggleImg() {
 
 
 
-    if(imageTop.src == "file:///Users/user/Shooroom/furn7.png"){
-      imageTop.src = "file:///Users/user/Shooroom/furn2.png";
+    if(imageTop.src == "./furn7.png"){
+      imageTop.src = "./furn2.png";
       document.getElementById("switchTop").src.value=imageTop;
       imageTop.style.opacity= 1;
       setTimeout(function(){
@@ -110,7 +110,7 @@ function toggleImg() {
 
 
 
-          imageTop.src = "file:///Users/user/Shooroom/furn7.png";
+          imageTop.src = "./furn7.png";
         document.getElementById("switchTop").src.value=imageTop;
     }
   },3000)
